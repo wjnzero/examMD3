@@ -1,12 +1,13 @@
 package service;
+import model.Student;
 
 import java.util.List;
 
 public interface INewService<E> {
     List<E> fillAll();
-//    E findById(int id);
-//    void insert(E p);
-//    boolean delete(int id) throws SQLException;
-//    boolean edit(int id, E t) throws SQLException;
-
+    void insertStudent(Student student);
+    E selectStudentById(int id);
+    boolean deleteStudent(int id);
+    boolean updateStudent(Student student);
+    List<E> selectStudentByName(String name);
 }

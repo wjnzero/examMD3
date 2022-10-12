@@ -5,18 +5,37 @@ import java.time.LocalDate;
 public class Student {
     private int id;
     private LocalDate dateBirth;
-    private String name, phone, email;
+    private String name, phone, email, address;
     private int classroom;
 
     public Student() {
     }
 
-    public Student(LocalDate dateBirth, String name, String phone, String email, int classroom) {
+    public Student(int id, LocalDate dateBirth, String name, String phone, String email, String address, int classroom) {
+        this.id = id;
         this.dateBirth = dateBirth;
         this.name = name;
         this.phone = phone;
         this.email = email;
+        this.address = address;
         this.classroom = classroom;
+    }
+
+    public Student(LocalDate dateBirth, String name, String phone, String email, String address, int classroom) {
+        this.dateBirth = dateBirth;
+        this.name = name;
+        this.phone = phone;
+        this.email = email;
+        this.address = address;
+        this.classroom = classroom;
+    }
+
+    public String getAddress() {
+        return address;
+    }
+
+    public void setAddress(String address) {
+        this.address = address;
     }
 
     public int getClassroom() {

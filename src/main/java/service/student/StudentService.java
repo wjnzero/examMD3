@@ -18,4 +18,28 @@ public class StudentService implements IStudentService {
     public List<Student> fillAll() {
         return studentDao.findAll();
     }
+    @Override
+    public void insertStudent(Student student) {
+        studentDao.insertStudent(student);
+    }
+
+    @Override
+    public Student selectStudentById(int id) {
+        return studentDao.selectStudentById(id);
+    }
+
+    @Override
+    public boolean deleteStudent(int id) {
+        return studentDao.deleteStudent(id);
+    }
+
+    @Override
+    public boolean updateStudent(Student student) {
+        return studentDao.updateStudent(student);
+    }
+
+    @Override
+    public List<Student> selectStudentByName(String name) {
+        return studentDao.selectStudentByName(name);
+    }
 }
