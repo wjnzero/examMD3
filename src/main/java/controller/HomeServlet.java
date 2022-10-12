@@ -1,5 +1,6 @@
 package controller;
 
+import model.Classroom;
 import model.Student;
 import service.INewService;
 import service.class1.ClassService;
@@ -18,11 +19,13 @@ public class HomeServlet extends HttpServlet {
 
     private INewService studentService;
     private IClassService classService;
+    private List<Classroom> classrooms;
 
     @Override
     public void init() {
         studentService = new StudentService();
         classService = new ClassService();
+        classrooms = classService.fillAll();
     }
 
     @Override
